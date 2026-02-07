@@ -1,0 +1,6 @@
+ffmpeg-python
+yt-dlp>=2025.01.01
+opencv-python
+numpy
+youtube-transcript-api
+python-dotenv
