@@ -1,6 +1,14 @@
 # Clipper
 
-Create vertical clips from YouTube videos or local files with auto-cropping and captions.
+Create viral vertical clips from YouTube videos with auto-cropping and captions.
+
+## Pipeline
+
+1. Fetch transcript from YouTube (saved as `full_transcript.txt` + `full_transcript.srt`)
+2. Use LLM to identify viral segments (outputs `segments.json`)
+3. Download only the needed segments from YouTube (not the full video)
+4. Auto-crop using MediaPipe face detection + add captions
+5. Output clips to `outputs/`
 
 ## Installation
 
@@ -10,25 +18,42 @@ pip install -r requirements.txt
 
 ## Usage
 
-### From YouTube URL
-
 ```bash
 python main.py "https://www.youtube.com/watch?v=VIDEO_ID"
 ```
 
-### From Local File
-
-Place an `input.mp4` file in the project directory and run:
+### Options
 
 ```bash
-python main.py
+python main.py "URL" --segments path/to/segments.json  # custom segments file
+python main.py "URL" --aspect vertical                  # vertical (default), square, horizontal
+python main.py "URL" --captions bold                    # bold (default), minimal, colorful, subtle, none
 ```
+
+## Segments File
+
+Clip timestamps are defined in `segments.json`. Each clip has:
+
+```json
+{
+  "timestamp_start": "00:01:37,359",
+  "timestamp_end": "00:01:46,078",
+  "suggested_title": "Clip Title",
+  "viral_score": 9.0
+}
+```
+
+Clips are processed in order of highest viral score first.
 
 ## Output
 
-Clips are saved to the `outputs/` directory with the naming format:
 ```
-clip_1_10_30.mp4  (clip 1, from 10s to 30s)
+outputs/
+  full_transcript.txt        # full video transcript
+  full_transcript.srt        # full video SRT
+  clip_1_Clip_Title.mp4      # video clip
+  clip_1_Clip_Title.srt      # clip SRT
+  ...
 ```
 
 ## Configuration
@@ -47,9 +72,3 @@ Edit `config.py` to customize:
 | `minimal` | Small text, bottom of screen |
 | `colorful` | Yellow text, centered |
 | `subtle` | Small with background |
-
-## Notes
-
-- Captions are auto-fetched from YouTube transcripts
-- Local files do not support auto-captions (no transcript source)
-- Clips are defined in `main.py` (edit the `clips` list to change time ranges)

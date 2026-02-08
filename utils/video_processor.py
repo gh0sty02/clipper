@@ -27,34 +27,36 @@ class VideoProcessor:
         end_time: float,
         aspect_ratio: str = 'vertical',
         crop_method: str = 'auto',
-        subtitle_file: str = None
+        subtitle_file: str = None,
+        audio_url: str = None
     ) -> dict:
         """
         Create a video clip with specified parameters
-        
+
         Args:
-            input_path: Path to source video
+            input_path: Path to source video or stream URL
             output_path: Path for output clip
             start_time: Start time in seconds
             end_time: End time in seconds
             aspect_ratio: 'vertical', 'square', or 'horizontal'
             crop_method: 'auto', 'center', 'cropdetect', or 'face'
             subtitle_file: Optional path to .ass subtitle file
-            
+            audio_url: Separate audio stream URL (for stream-based downloads)
+
         Returns:
             dict with processing info
         """
-        
+
         duration = end_time - start_time
-        
+
         # Get video info
         video_info = self._get_video_info(input_path)
         original_width = video_info['width']
         original_height = video_info['height']
-        
+
         # Determine target resolution
         target_width, target_height = OUTPUT_RESOLUTIONS[aspect_ratio]
-        
+
         # Detect optimal crop position
         logger.info(f"Detecting crop position using method: {crop_method}")
         crop_x, method_used = self.crop_detector.detect_crop_position(
@@ -63,39 +65,46 @@ class VideoProcessor:
             duration,
             method=crop_method
         )
-        
+
         # Calculate crop dimensions
         crop_width = int(original_height * target_width / target_height)
         crop_height = original_height
-        
+
         # Ensure crop fits within video bounds
         crop_x = max(0, min(crop_x - crop_width // 2, original_width - crop_width))
-        
+
         logger.info(f"Cropping: {crop_width}x{crop_height} at position {crop_x},0")
-        
+
         # Build filter chain
         vf_filters = []
-        
+
         # Crop filter
         vf_filters.append(f"crop={crop_width}:{crop_height}:{crop_x}:0")
-        
+
         # Scale to target resolution
         vf_filters.append(f"scale={target_width}:{target_height}")
-        
-        # Add subtitles if provided
+
+        # Add subtitles if provided (use 'ass' filter instead of 'subtitles'
+        # to avoid rendering embedded subtitle streams from the input)
         if subtitle_file:
             # Escape path for FFmpeg
             subtitle_path = Path(subtitle_file).absolute()
             subtitle_path_str = str(subtitle_path).replace('\\', '/').replace(':', '\\:')
-            vf_filters.append(f"subtitles='{subtitle_path_str}'")
-        
+            vf_filters.append(f"ass='{subtitle_path_str}'")
+
         vf_string = ','.join(vf_filters)
-        
+
         # Build FFmpeg command
-        cmd = [
-            'ffmpeg',
-            '-ss', str(start_time),
-            '-i', input_path,
+        cmd = ['ffmpeg', '-ss', str(start_time)]
+
+        # Add video input
+        cmd += ['-i', input_path]
+
+        # Add separate audio input if provided (stream-based)
+        if audio_url:
+            cmd += ['-ss', str(start_time), '-i', audio_url]
+
+        cmd += [
             '-t', str(duration),
             '-vf', vf_string,
             '-c:v', 'libx264',
@@ -103,13 +112,19 @@ class VideoProcessor:
             '-crf', str(FFMPEG_CRF),
             '-c:a', 'aac',
             '-b:a', AUDIO_BITRATE,
-            '-y',  # Overwrite output file
-            output_path
         ]
-        
+
+        # Explicitly map only video and audio streams (strip all subtitle streams)
+        if audio_url:
+            cmd += ['-map', '0:v:0', '-map', '1:a:0']
+        else:
+            cmd += ['-map', '0:v:0', '-map', '0:a:0']
+
+        cmd += ['-sn', '-dn', '-y', output_path]
+
         logger.info(f"Processing clip: {Path(output_path).name}")
         logger.info(f"Command: {' '.join(cmd)}")
-        
+
         try:
             result = subprocess.run(
                 cmd,
@@ -117,9 +132,9 @@ class VideoProcessor:
                 text=True,
                 check=True
             )
-            
+
             logger.info(f"Successfully created clip: {output_path}")
-            
+
             return {
                 'success': True,
                 'output_path': output_path,
@@ -128,7 +143,7 @@ class VideoProcessor:
                 'crop_position': crop_x,
                 'resolution': f"{target_width}x{target_height}"
             }
-            
+
         except subprocess.CalledProcessError as e:
             logger.error(f"FFmpeg error: {e.stderr}")
             raise

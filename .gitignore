@@ -214,3 +214,10 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+
+temp/**
+outputs/**
+clip.mp4
+input.mp4
+output_vertical.mp4

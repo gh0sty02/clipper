@@ -4,40 +4,53 @@ import cv2
 import numpy as np
 from pathlib import Path
 import logging
-import mediapipe as mp
 from typing import Optional, Tuple, List
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+MODEL_PATH = Path(__file__).parent.parent / "models" / "blaze_face_short_range.tflite"
+
 
 class CropDetector:
     """Detect optimal crop position for vertical video using multiple methods"""
-    
+
     def __init__(self, face_detection_enabled: bool = True, use_mediapipe: bool = True):
         self.face_detection_enabled = face_detection_enabled
         self.use_mediapipe = use_mediapipe
-        
-        # Initialize MediaPipe face detection
-        self.mp_face_detection = None
-        self.mp_drawing = None
-        
+
+        # Try loading MediaPipe tasks API
+        self.mp_vision = None
+        self.mp_base_options = None
+
         if face_detection_enabled and use_mediapipe:
             try:
-                self.mp_face_detection = mp.solutions.face_detection
-                self.mp_drawing = mp.solutions.drawing_utils
-                logger.info("MediaPipe face detection initialized")
+                from mediapipe.tasks.python.vision import FaceDetector, FaceDetectorOptions
+                from mediapipe.tasks.python import BaseOptions
+                import mediapipe as mp
+
+                if not MODEL_PATH.exists():
+                    raise FileNotFoundError(f"Model file not found: {MODEL_PATH}")
+
+                self.mp_vision = {
+                    'FaceDetector': FaceDetector,
+                    'FaceDetectorOptions': FaceDetectorOptions,
+                    'BaseOptions': BaseOptions,
+                    'Image': mp.Image,
+                    'ImageFormat': mp.ImageFormat,
+                }
+                logger.info("MediaPipe face detection initialized (tasks API)")
             except Exception as e:
                 logger.warning(f"Failed to initialize MediaPipe: {e}, falling back to OpenCV")
                 self.use_mediapipe = False
-        
+
         # Fallback to OpenCV Haar Cascade if MediaPipe fails or is disabled
         self.face_cascade = None
         if face_detection_enabled and not self.use_mediapipe:
             try:
                 cascade_path = cv2.data.haarcascades + 'haarcascade_frontalface_default.xml'
                 self.face_cascade = cv2.CascadeClassifier(cascade_path)
-                
+
                 if self.face_cascade.empty():
                     logger.warning("Failed to load face cascade, disabling face detection")
                     self.face_detection_enabled = False
@@ -156,92 +169,83 @@ class CropDetector:
             logger.error(f"Cropdetect failed: {e}")
             return None
     
-    def _mediapipe_face_detection(self, video_path: str, start_time: float, 
+    def _mediapipe_face_detection(self, video_path: str, start_time: float,
                                   duration: float) -> Optional[int]:
         """
-        Use MediaPipe face detection for optimal crop position
+        Use MediaPipe face detection (tasks API) for optimal crop position
         More accurate than Haar Cascades, provides confidence scores
         """
         try:
+            FaceDetector = self.mp_vision['FaceDetector']
+            FaceDetectorOptions = self.mp_vision['FaceDetectorOptions']
+            BaseOptions = self.mp_vision['BaseOptions']
+            MPImage = self.mp_vision['Image']
+            ImageFormat = self.mp_vision['ImageFormat']
+
             face_positions = []
             confidences = []
-            
+
             cap = cv2.VideoCapture(video_path)
-            
-            # Set starting position
             cap.set(cv2.CAP_PROP_POS_MSEC, start_time * 1000)
-            
+
             fps = cap.get(cv2.CAP_PROP_FPS)
             if fps == 0:
-                fps = 30  # Default fallback
+                fps = 30
             total_frames = int(duration * fps)
             frame_width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
-            
-            # Sample every 15 frames (~0.5s at 30fps) for performance
+
             sample_interval = 15
-            
-            with self.mp_face_detection.FaceDetection(
-                model_selection=1,  # 1 = long range, better for small faces
-                min_detection_confidence=0.5
-            ) as face_detection:
-                
+
+            options = FaceDetectorOptions(
+                base_options=BaseOptions(model_asset_path=str(MODEL_PATH)),
+                min_detection_confidence=0.5,
+            )
+
+            with FaceDetector.create_from_options(options) as detector:
                 frame_count = 0
                 samples_taken = 0
-                
+
                 while frame_count < total_frames:
                     ret, frame = cap.read()
                     if not ret:
                         break
-                    
+
                     if frame_count % sample_interval == 0:
-                        # Convert BGR to RGB for MediaPipe
                         rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-                        rgb_frame.flags.writeable = False
-                        
-                        # Process face detection
-                        results = face_detection.process(rgb_frame)
-                        
-                        if results.detections:
-                            for detection in results.detections:
-                                # Get relative bounding box
-                                bbox = detection.location_data.relative_bounding_box
-                                
-                                # Convert to absolute coordinates
-                                x_center = (bbox.xmin + bbox.width / 2) * frame_width
-                                confidence = detection.score[0]
-                                
-                                face_positions.append(x_center)
-                                confidences.append(confidence)
-                                logger.debug(f"MediaPipe face: x={x_center:.1f}, conf={confidence:.2f}")
-                        
+                        mp_image = MPImage(image_format=ImageFormat.SRGB, data=rgb_frame)
+
+                        result = detector.detect(mp_image)
+
+                        for detection in result.detections:
+                            bbox = detection.bounding_box
+                            x_center = bbox.origin_x + bbox.width / 2
+                            confidence = detection.categories[0].score
+
+                            face_positions.append(x_center)
+                            confidences.append(confidence)
+                            logger.debug(f"MediaPipe face: x={x_center:.1f}, conf={confidence:.2f}")
+
                         samples_taken += 1
-                    
+
                     frame_count += 1
-            
+
             cap.release()
-            
+
             if face_positions:
-                # Weight by confidence if available
-                if len(confidences) == len(face_positions) and any(c > 0 for c in confidences):
-                    # Filter low confidence detections
-                    valid_pairs = [(pos, conf) for pos, conf in zip(face_positions, confidences) if conf > 0.6]
-                    if valid_pairs:
-                        positions, weights = zip(*valid_pairs)
-                        # Weighted median
-                        optimal_x = int(np.average(positions, weights=weights))
-                    else:
-                        optimal_x = int(np.median(face_positions))
+                valid_pairs = [(pos, conf) for pos, conf in zip(face_positions, confidences) if conf > 0.6]
+                if valid_pairs:
+                    positions, weights = zip(*valid_pairs)
+                    optimal_x = int(np.average(positions, weights=weights))
                 else:
-                    # Simple median (more robust than mean against outliers)
                     optimal_x = int(np.median(face_positions))
-                
+
                 logger.info(f"MediaPipe found optimal position: {optimal_x} "
                           f"(from {len(face_positions)} faces in {samples_taken} frames)")
                 return optimal_x
-            
+
             logger.info("No faces detected with MediaPipe in video segment")
             return None
-            
+
         except Exception as e:
             logger.error(f"MediaPipe face detection failed: {e}")
             return None

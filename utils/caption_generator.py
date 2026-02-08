@@ -128,14 +128,36 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 """
         return header
     
+    @staticmethod
+    def _clean_caption_text(text: str) -> str:
+        """Clean and format caption text from auto-generated transcripts"""
+        import re
+
+        text = text.replace('\n', ' ').strip()
+
+        # Remove filler artifacts common in auto-captions
+        text = re.sub(r'\[.*?\]', '', text)  # [Music], [Applause], etc.
+
+        # Capitalize first letter of each sentence
+        text = re.sub(r'(^|[.!?]\s+)([a-z])', lambda m: m.group(1) + m.group(2).upper(), text)
+
+        # Capitalize the very first character
+        if text and text[0].islower():
+            text = text[0].upper() + text[1:]
+
+        # Capitalize "I" when standalone
+        text = re.sub(r'\bi\b', 'I', text)
+
+        return text.strip()
+
     def _create_dialogue_line(self, text: str, start: float, duration: float) -> str:
         """Create a single dialogue line in ASS format"""
-        
+
         start_time = self._seconds_to_ass_time(start)
         end_time = self._seconds_to_ass_time(start + duration)
-        
+
         # Clean text
-        text = text.replace('\n', ' ').strip()
+        text = self._clean_caption_text(text)
         
         # Add word-by-word animation for 'bold' preset
         if self.preset_name == 'bold':

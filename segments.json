@@ -1,0 +1,875 @@
+{
+  "clips": [
+    {
+      "id": 1,
+      "timestamp_start": "00:00:13,080",
+      "timestamp_end": "00:00:27,439",
+      "suggested_title": "Learning Iron Palm Kung Fu: The Shocking Secret Ingredients!",
+      "hook_text": "You think Iron Palm Kung Fu is just about hitting things? Think again!",
+      "reason": "The combination of learning a seemingly intense martial art ('Iron Palm Kung Fu') with the reveal of 'BS' ingredients and a focus on breathing creates immediate curiosity and a sense of 'what is going on here?' The mention of 'BS' is a strong hook, implying something unexpected or perhaps even a debunking. The shift from physical training to ingredient breakdown is a good narrative turn.",
+      "engagement_triggers": [
+        "hook",
+        "emotional",
+        "quotable",
+        "i never knew that"
+      ],
+      "viral_score": 9.0,
+      "platforms": [
+        "tiktok",
+        "reels",
+        "shorts",
+        "youtube"
+      ],
+      "hashtags": [
+        "#IronPalm",
+        "#KungFu",
+        "#MartialArts",
+        "#ShaolinTemple",
+        "#HiddenSecrets"
+      ],
+      "content_type": "educational | entertainment | storytelling",
+      "target_emotion": "curiosity | surprise",
+      "chunk_index": 1
+    },
+    {
+      "id": 1,
+      "timestamp_start": "00:01:37,359",
+      "timestamp_end": "00:01:46,078",
+      "suggested_title": "No Hardening Without Pain: Master's Secret",
+      "hook_text": "\"There is no hardening without pain...\"",
+      "reason": "This segment contains a powerful, almost paradoxical statement about pain and 'hardening' (likely referring to physical or mental resilience in the context of martial arts). The master's philosophy is both intriguing and quotable. It also touches on the universal experience of avoiding pain versus confronting it, making it relatable. The implication that running from pain prevents 'hardening' is a strong, memorable takeaway.",
+      "engagement_triggers": [
+        "hook",
+        "quotable",
+        "contrarian/unexpected opinions",
+        "relatable universal experiences",
+        "inspirational"
+      ],
+      "viral_score": 9.0,
+      "platforms": [
+        "tiktok",
+        "reels",
+        "shorts",
+        "twitter"
+      ],
+      "hashtags": [
+        "#martialarts",
+        "#mindset",
+        "#pain",
+        "#resilience",
+        "#philosophy",
+        "#motivation"
+      ],
+      "content_type": "inspirational | storytelling | educational",
+      "target_emotion": "curiosity | reflection | inspiration",
+      "chunk_index": 2
+    },
+    {
+      "id": 1,
+      "timestamp_start": "00:05:12,000",
+      "timestamp_end": "00:05:27,918",
+      "suggested_title": "The Wrong Question: Why Practicing Matters Most",
+      "hook_text": "Is inhale or exhale more important? The wrong question!",
+      "reason": "This segment starts with a series of seemingly binary choices (left/right, inhale/exhale, relaxation/tension, soft/hard) which create an immediate curiosity gap. The pivot to 'the wrong question' is a strong hook, followed by the core message that action and practice are what truly matter, particularly in the context of martial arts. This is highly quotable and presents a philosophical insight.",
+      "engagement_triggers": [
+        "hook",
+        "quotable",
+        "contrarian/unexpected opinions",
+        "inspirational",
+        "educational"
+      ],
+      "viral_score": 9.0,
+      "platforms": [
+        "tiktok",
+        "reels",
+        "shorts",
+        "youtube"
+      ],
+      "hashtags": [
+        "#martialarts",
+        "#philosophy",
+        "#motivation",
+        "#mindset",
+        "#kungfu"
+      ],
+      "content_type": "inspirational | storytelling",
+      "target_emotion": "curiosity | contemplation | inspiration",
+      "chunk_index": 6
+    },
+    {
+      "id": 1,
+      "timestamp_start": "00:10:15,000",
+      "timestamp_end": "00:10:24,439",
+      "suggested_title": "Why Shaolin Monks Live Forever: Wisdom vs. Knowledge",
+      "hook_text": "Knowledge is fleeting, but wisdom is forever. The day I stop learning is the day I stop living.",
+      "reason": "This segment offers a profound and quotable statement about the nature of learning and life, framed within the context of the ancient Shaolin tradition. The contrast between fleeting knowledge and eternal wisdom is a powerful, universally appealing concept. The idea of stopping learning as stopping living is also a strong hook.",
+      "engagement_triggers": [
+        "quotable",
+        "inspirational",
+        "contrarian/unexpected opinions",
+        "relatable universal experiences"
+      ],
+      "viral_score": 8.8,
+      "platforms": [
+        "tiktok",
+        "reels",
+        "shorts",
+        "twitter"
+      ],
+      "hashtags": [
+        "#wisdom",
+        "#lifelessons",
+        "#shaolin",
+        "#mindset",
+        "#inspiration"
+      ],
+      "content_type": "inspirational | storytelling",
+      "target_emotion": "inspiration | curiosity | reflection",
+      "chunk_index": 10
+    },
+    {
+      "id": 1,
+      "timestamp_start": "00:02:03,078",
+      "timestamp_end": "00:02:11,840",
+      "suggested_title": "The True Meaning of Commitment in Martial Arts",
+      "hook_text": "You lie to yourself, you won't progress. No matter which martial art it is...",
+      "reason": "This segment directly addresses a core aspect of discipline and progress, which is highly relatable for anyone pursuing a skill or goal. The opening is a bold, almost confrontational statement that grabs attention. It then transitions into a more philosophical point about character building, using a Star Wars analogy which is universally recognized and adds an 'I never knew that' educational element to the character development aspect of martial arts.",
+      "engagement_triggers": [
+        "hook",
+        "emotional",
+        "quotable",
+        "contrarian/unexpected opinions",
+        "relatable universal experiences",
+        "\"I never knew that\" educational moments"
+      ],
+      "viral_score": 8.5,
+      "platforms": [
+        "tiktok",
+        "reels",
+        "shorts",
+        "youtube"
+      ],
+      "hashtags": [
+        "#martialarts",
+        "#commitment",
+        "#discipline",
+        "#personalgrowth",
+        "#starwars",
+        "#motivation"
+      ],
+      "content_type": "inspirational | educational | storytelling",
+      "target_emotion": "curiosity | inspiration | reflection",
+      "chunk_index": 3
+    },
+    {
+      "id": 1,
+      "timestamp_start": "00:03:33",
+      "timestamp_end": "00:03:46",
+      "suggested_title": "Walk Straight: You'll See the Whole World Once!",
+      "hook_text": "If you keep walking straight, you'll see the whole world at least once!",
+      "reason": "This segment offers a surprisingly simple and optimistic perspective on life's journey. The analogy of walking straight to 'see the whole world' is an 'I never knew that' educational moment combined with an inspirational and relatable universal experience. It's presented as a direct, almost profound, statement.",
+      "engagement_triggers": [
+        "hook",
+        "inspirational",
+        "quotable",
+        "relatable",
+        "i never knew that"
+      ],
+      "viral_score": 8.5,
+      "platforms": [
+        "tiktok",
+        "reels",
+        "shorts"
+      ],
+      "hashtags": [
+        "#lifelessons",
+        "#motivation",
+        "#perspective",
+        "#journey",
+        "#inspiration"
+      ],
+      "content_type": "inspirational | storytelling",
+      "target_emotion": "inspiration | curiosity",
+      "chunk_index": 4
+    },
+    {
+      "id": 1,
+      "timestamp_start": "00:06:16,120",
+      "timestamp_end": "00:06:23,120",
+      "suggested_title": "Shaolin Temple's Secret Weapon: Warrior Monks & Their Knowledge!",
+      "hook_text": "Did the Western Church need Templar Knights to protect wealth, while the Shaolin Temple needed WARRIOR MONKS to protect knowledge?",
+      "reason": "This segment draws a compelling parallel between the Templar Knights and Shaolin Warrior Monks, framing the monks as protectors of knowledge. The comparison is unexpected and creates a curiosity gap about the role of these monks. The phrase 'Warrior Monks' is inherently attention-grabbing. The question 'how is this relevant today' directly prompts viewer engagement.",
+      "engagement_triggers": [
+        "hook",
+        "quotable",
+        "storytelling",
+        "contrarian/unexpected opinions",
+        "educational"
+      ],
+      "viral_score": 8.5,
+      "platforms": [
+        "tiktok",
+        "reels",
+        "shorts",
+        "youtube"
+      ],
+      "hashtags": [
+        "#shaolintemple",
+        "#buddhism",
+        "#history",
+        "#warriormonks",
+        "#knowledge"
+      ],
+      "content_type": "storytelling",
+      "target_emotion": "curiosity",
+      "chunk_index": 7
+    },
+    {
+      "id": 1,
+      "timestamp_start": "00:07:24,478",
+      "timestamp_end": "00:07:30,159",
+      "suggested_title": "You Can't Fix What You Don't Know Exists",
+      "hook_text": "You can only fix a problem if you know where the problem is located.",
+      "reason": "This is a profound and universally applicable statement that acts as a strong hook. It's presented as an insightful realization, hinting at self-improvement and problem-solving. The phrasing is concise and quotable.",
+      "engagement_triggers": [
+        "hook",
+        "quotable",
+        "educational",
+        "relatable"
+      ],
+      "viral_score": 8.5,
+      "platforms": [
+        "tiktok",
+        "reels",
+        "shorts"
+      ],
+      "hashtags": [
+        "#selfawareness",
+        "#problemsolving",
+        "#mindset",
+        "#growthmindset"
+      ],
+      "content_type": "educational",
+      "target_emotion": "curiosity",
+      "chunk_index": 8
+    },
+    {
+      "id": 2,
+      "timestamp_start": "00:10:30,159",
+      "timestamp_end": "00:10:44,959",
+      "suggested_title": "Shaolin Monks' Stone Couch: The Secret to Being 'Rock Hard'!",
+      "hook_text": "No wonder the Shaolin monks are rock hard! Their couches are made of stones!",
+      "reason": "This is a humorous and relatable observation that provides a 'visual gag' and a witty punchline. The unexpected explanation for the monks' physique ties into a common desire for physical toughness and adds an element of surprise and lightheartedness. The 'I never knew that' aspect comes from the unconventional furniture.",
+      "engagement_triggers": [
+        "humor",
+        "shock",
+        "quotable",
+        "relatable universal experiences",
+        "I never knew that"
+      ],
+      "viral_score": 8.5,
+      "platforms": [
+        "tiktok",
+        "reels",
+        "shorts",
+        "instagram"
+      ],
+      "hashtags": [
+        "#shaolin",
+        "#monks",
+        "#fitness",
+        "#humor",
+        "#mindblowing"
+      ],
+      "content_type": "entertainment | humor",
+      "target_emotion": "humor | surprise | curiosity",
+      "chunk_index": 10
+    },
+    {
+      "id": 3,
+      "timestamp_start": "00:00:00,320",
+      "timestamp_end": "00:00:10,678",
+      "suggested_title": "Shaolin Temple Europe Headmaster's Unforgettable Lesson!",
+      "hook_text": "Training with the Headmaster of Shaolin Temple Europe... and a lesson I'll NEVER forget.",
+      "reason": "This opening sets a strong sense of intrigue and authority. The mention of 'Shaolin Temple Europe' immediately grabs attention, and the promise of a lesson 'I will never forget' creates a significant curiosity gap. The hint of 'leaving blood already' adds a dramatic and slightly shocking element that will make viewers want to know what happened.",
+      "engagement_triggers": [
+        "hook",
+        "emotional",
+        "quotable",
+        "story climaxes or reveals"
+      ],
+      "viral_score": 8.0,
+      "platforms": [
+        "tiktok",
+        "reels",
+        "shorts",
+        "youtube"
+      ],
+      "hashtags": [
+        "#ShaolinTemple",
+        "#KungFu",
+        "#MartialArts",
+        "#UnforgettableLesson",
+        "#Training"
+      ],
+      "content_type": "storytelling | inspirational",
+      "target_emotion": "curiosity | shock | inspiration",
+      "chunk_index": 1
+    },
+    {
+      "id": 1,
+      "timestamp_start": "00:04:40,319",
+      "timestamp_end": "00:04:45,599",
+      "suggested_title": "The Secret to Effortless Action (Wu Wei Explained)",
+      "hook_text": "Ever feel stuck? The secret might be 'Wu Wei' - effortless action.",
+      "reason": "This segment introduces the concept of 'Wu Wei' (effortless action), which is a fascinating philosophical and practical concept. The explanation of how to achieve it through seemingly contradictory actions (like 'left open and right open') provides a 'never knew that' educational moment and a curiosity gap. The idea of 'effortless action' is universally appealing.",
+      "engagement_triggers": [
+        "hook",
+        "never knew that",
+        "quotable",
+        "contrarian/unexpected opinions",
+        "relatable universal experiences"
+      ],
+      "viral_score": 8.0,
+      "platforms": [
+        "tiktok",
+        "reels",
+        "shorts",
+        "youtube"
+      ],
+      "hashtags": [
+        "#wuwei",
+        "#effortlessaction",
+        "#mindfulness",
+        "#philosophy",
+        "#personalgrowth"
+      ],
+      "content_type": "educational | inspirational",
+      "target_emotion": "curiosity | inspiration | wonder",
+      "chunk_index": 5
+    },
+    {
+      "id": 2,
+      "timestamp_start": "00:07:44,759",
+      "timestamp_end": "00:07:56,399",
+      "suggested_title": "Mind Says Left, Body Says...?",
+      "hook_text": "Your body is supposed to deliver what the mind tells your body to do. So if your mind says left, you can't make this...",
+      "reason": "This segment highlights a disconnect between mind and body, a relatable experience for many. The setup of 'mind says left, you can't make this' creates a clear curiosity gap and a humorous or frustrating moment that many viewers might identify with. The subsequent 'yeah right' and emphasis on direct connection further drives home the point.",
+      "engagement_triggers": [
+        "hook",
+        "relatable",
+        "humor",
+        "quotable"
+      ],
+      "viral_score": 8.0,
+      "platforms": [
+        "tiktok",
+        "reels",
+        "shorts",
+        "instagram"
+      ],
+      "hashtags": [
+        "#mindbodyconnection",
+        "#bodyawareness",
+        "#mindfulness",
+        "#discipline"
+      ],
+      "content_type": "entertainment",
+      "target_emotion": "humor",
+      "chunk_index": 8
+    },
+    {
+      "id": 1,
+      "timestamp_start": "00:08:41,278",
+      "timestamp_end": "00:08:47,080",
+      "suggested_title": "Peaceful and Strong: The Martial Art Paradox",
+      "hook_text": "Is it possible to be both peaceful AND strong?",
+      "reason": "This segment directly addresses a seemingly contradictory idea that is relevant to philosophies like Buddhism and the practice of martial arts. The speaker posits that it's not a downside to be both, which creates curiosity. The mention of the Shaolin tradition adds an element of historical and cultural intrigue.",
+      "engagement_triggers": [
+        "hook",
+        "contrarian/unexpected opinions",
+        "quotable",
+        "storytelling",
+        "educational"
+      ],
+      "viral_score": 8.0,
+      "platforms": [
+        "tiktok",
+        "reels",
+        "shorts",
+        "youtube"
+      ],
+      "hashtags": [
+        "#martialarts",
+        "#buddhism",
+        "#philosophy",
+        "#mindfulness",
+        "#shaolin"
+      ],
+      "content_type": "inspirational",
+      "target_emotion": "curiosity",
+      "chunk_index": 9
+    },
+    {
+      "id": 2,
+      "timestamp_start": "00:00:45,640",
+      "timestamp_end": "00:00:52,439",
+      "suggested_title": "The Struggle is Real: Even Kung Fu Masters Get It Wrong!",
+      "hook_text": "Training with a Shaolin Master... and I'm already failing?",
+      "reason": "This segment captures a relatable moment of struggle and imperfection, even for someone training with an expert. The contrast between the master's power and the trainee's apparent failure creates humor and relatability. The line 'apparently I'm doing something wrong' is a classic setup for comedic or self-deprecating content.",
+      "engagement_triggers": [
+        "emotional",
+        "quotable",
+        "relatable universal experiences",
+        "humor"
+      ],
+      "viral_score": 7.5,
+      "platforms": [
+        "tiktok",
+        "reels",
+        "shorts"
+      ],
+      "hashtags": [
+        "#KungFuFail",
+        "#MartialArtsLife",
+        "#LearningCurve",
+        "#Shaolin",
+        "#Relatable"
+      ],
+      "content_type": "entertainment | storytelling",
+      "target_emotion": "humor | relatability | surprise",
+      "chunk_index": 1
+    },
+    {
+      "id": 3,
+      "timestamp_start": "00:01:01,600",
+      "timestamp_end": "00:01:07,040",
+      "suggested_title": "Karate Move That Can Break Your Collarbone?!",
+      "hook_text": "\"Which like would break the collarbone...\"",
+      "reason": "This is a classic 'hook' designed to immediately grab attention. The mention of breaking a collarbone is shocking and unexpected, especially in the context of martial arts training. It creates a significant curiosity gap, making viewers want to know what technique could cause such an injury and how the speaker is attempting it.",
+      "engagement_triggers": [
+        "hook",
+        "shock",
+        "curiosity gap"
+      ],
+      "viral_score": 7.5,
+      "platforms": [
+        "tiktok",
+        "reels",
+        "shorts"
+      ],
+      "hashtags": [
+        "#karate",
+        "#martialarts",
+        "#danger",
+        "#training",
+        "#fight"
+      ],
+      "content_type": "entertainment | storytelling",
+      "target_emotion": "curiosity | surprise | shock",
+      "chunk_index": 2
+    },
+    {
+      "id": 2,
+      "timestamp_start": "00:02:21,800",
+      "timestamp_end": "00:02:30,439",
+      "suggested_title": "Jedi vs. Darth Vader: A Lesson in Power",
+      "hook_text": "The Jedi have the power, and Darth Vader also has the power, but they use it in a different way.",
+      "reason": "This segment uses the widely popular Star Wars analogy to explain a nuanced point about moral and ethical guidelines. It's a great 'I never knew that' moment where a familiar pop culture reference is used to illustrate a deeper concept. The contrast between Jedi and Darth Vader is visually and conceptually engaging, making the explanation memorable and shareable.",
+      "engagement_triggers": [
+        "hook",
+        "quotable",
+        "\"I never knew that\" educational moments",
+        "relatable universal experiences"
+      ],
+      "viral_score": 7.5,
+      "platforms": [
+        "tiktok",
+        "reels",
+        "shorts",
+        "youtube"
+      ],
+      "hashtags": [
+        "#starwars",
+        "#jedi",
+        "#darthvader",
+        "#ethics",
+        "#morality",
+        "#mindset"
+      ],
+      "content_type": "educational | entertainment | storytelling",
+      "target_emotion": "curiosity | surprise | reflection",
+      "chunk_index": 3
+    },
+    {
+      "id": 2,
+      "timestamp_start": "00:03:46",
+      "timestamp_end": "00:04:05",
+      "suggested_title": "Why You're Stuck: The Square Walking Trap!",
+      "hook_text": "If you change your mind and walk 10km North, then South... you end up walking in a square!",
+      "reason": "This segment provides a clear, almost visual, explanation of unproductive behavior using a simple analogy. It highlights the concept of 'walking in a square' as a consequence of indecisiveness, which is a highly relatable universal experience. The shift from the previous inspirational clip to this cautionary one creates a good contrast and likely drives curiosity.",
+      "engagement_triggers": [
+        "hook",
+        "quotable",
+        "relatable",
+        "contrarian/unexpected opinions"
+      ],
+      "viral_score": 7.5,
+      "platforms": [
+        "tiktok",
+        "reels",
+        "shorts"
+      ],
+      "hashtags": [
+        "#procrastination",
+        "#mindset",
+        "#selfimprovement",
+        "#motivation",
+        "#productivity"
+      ],
+      "content_type": "educational | storytelling",
+      "target_emotion": "curiosity | realization",
+      "chunk_index": 4
+    },
+    {
+      "id": 2,
+      "timestamp_start": "00:04:12,719",
+      "timestamp_end": "00:04:21,600",
+      "suggested_title": "The Training Class I Couldn't Attend (And Why You Might Not Want To Either!)",
+      "hook_text": "This training session was ONLY for the celibate... nope, not for me!",
+      "reason": "The speaker's humorous and relatable reaction to being excluded from a training session because they are not celibate creates an emotional peak (humor). It's a surprising and slightly absurd situation that's likely to get a reaction. The line 'I have no intention of being celibate anytime soon' is a quotable soundbite.",
+      "engagement_triggers": [
+        "hook",
+        "emotional",
+        "quotable",
+        "contrarian/unexpected opinions"
+      ],
+      "viral_score": 7.5,
+      "platforms": [
+        "tiktok",
+        "reels",
+        "shorts"
+      ],
+      "hashtags": [
+        "#celibacy",
+        "#training",
+        "#humor",
+        "#relatable",
+        "#lifelessons"
+      ],
+      "content_type": "entertainment | storytelling",
+      "target_emotion": "humor | surprise",
+      "chunk_index": 5
+    },
+    {
+      "id": 3,
+      "timestamp_start": "00:05:43,879",
+      "timestamp_end": "00:05:51,639",
+      "suggested_title": "The Unanswered Question at the Temple",
+      "hook_text": "My time at the temple is almost over, but one thing I still don't understand...",
+      "reason": "This segment sets up a classic storytelling device: a lingering mystery or unresolved question. The phrase 'one thing I still don't understand' creates a strong curiosity gap, making viewers want to know what it is and how the master will answer. It transitions into the master's response, building anticipation for the next part of the conversation.",
+      "engagement_triggers": [
+        "hook",
+        "story climaxes or reveals",
+        "curiosity gap"
+      ],
+      "viral_score": 7.5,
+      "platforms": [
+        "tiktok",
+        "reels",
+        "shorts",
+        "youtube"
+      ],
+      "hashtags": [
+        "#mystery",
+        "#temple",
+        "#kungfu",
+        "#storytelling",
+        "#unanswered"
+      ],
+      "content_type": "storytelling",
+      "target_emotion": "curiosity | anticipation",
+      "chunk_index": 6
+    },
+    {
+      "id": 2,
+      "timestamp_start": "00:06:47,680",
+      "timestamp_end": "00:06:57,439",
+      "suggested_title": "The REAL First Lesson of Shaolin? It's NOT Punching!",
+      "hook_text": "The first thing I teach new students isn't how to punch or kick... it's BODY AWARENESS!",
+      "reason": "This clip offers an 'I never knew that' educational moment that subverts expectations. Most people associate Shaolin with martial arts prowess, so revealing that the initial focus is on 'body awareness' is surprising and intriguing. It provides a fresh perspective on martial arts training and mindfulness.",
+      "engagement_triggers": [
+        "hook",
+        "quotable",
+        "storytelling",
+        "contrarian/unexpected opinions",
+        "'i never knew that'"
+      ],
+      "viral_score": 7.5,
+      "platforms": [
+        "tiktok",
+        "reels",
+        "shorts",
+        "instagram"
+      ],
+      "hashtags": [
+        "#shaolin",
+        "#martialarts",
+        "#mindfulness",
+        "#selfawareness",
+        "#bodyawareness"
+      ],
+      "content_type": "educational",
+      "target_emotion": "surprise",
+      "chunk_index": 7
+    },
+    {
+      "id": 3,
+      "timestamp_start": "00:08:06,319",
+      "timestamp_end": "00:08:14,639",
+      "suggested_title": "Modern Society is 'Too Much Mind Activity'",
+      "hook_text": "Movement is key, especially for nowadays society where everybody is spending too much with mind activity.",
+      "reason": "This is a contrarian and insightful observation about modern society. The phrase 'too much with mind activity' is a memorable and potentially controversial statement that can spark discussion and agreement/disagreement. It taps into a common feeling of being over-stimulated or disconnected.",
+      "engagement_triggers": [
+        "contrarian",
+        "quotable",
+        "relatable",
+        "hook"
+      ],
+      "viral_score": 7.5,
+      "platforms": [
+        "tiktok",
+        "reels",
+        "shorts",
+        "twitter"
+      ],
+      "hashtags": [
+        "#moderndayproblems",
+        "#digitaldetox",
+        "#movementismedicine",
+        "#society"
+      ],
+      "content_type": "inspirational",
+      "target_emotion": "curiosity",
+      "chunk_index": 8
+    },
+    {
+      "id": 2,
+      "timestamp_start": "00:09:06,559",
+      "timestamp_end": "00:09:11,559",
+      "suggested_title": "Warrior Monks Weren't Just Meditating!",
+      "hook_text": "The warrior monks of Shaolin didn't just sit around and meditate...",
+      "reason": "This is a strong 'I never knew that' moment that challenges a common perception. The contrast between 'meditating' and 'using their body' is a powerful hook that creates surprise and prompts further curiosity about their practices.",
+      "engagement_triggers": [
+        "hook",
+        "emotional",
+        "quotable",
+        "story climaxes or reveals",
+        "I never knew that"
+      ],
+      "viral_score": 7.5,
+      "platforms": [
+        "tiktok",
+        "reels",
+        "shorts",
+        "history"
+      ],
+      "hashtags": [
+        "#shaolin",
+        "#warriormonks",
+        "#historyfacts",
+        "#martialarts",
+        "#unexpected"
+      ],
+      "content_type": "educational",
+      "target_emotion": "surprise",
+      "chunk_index": 9
+    },
+    {
+      "id": 5,
+      "timestamp_start": "00:01:23,799",
+      "timestamp_end": "00:01:31,519",
+      "suggested_title": "My First Time... And I'm Already Bleeding?!",
+      "hook_text": "\"yeah leaving blood already Yes for right now that it's your first time it's still really good\"",
+      "reason": "This is a direct and impactful moment of consequence. The immediate appearance of blood from a 'first time' attempt is shocking and visually compelling. The presenter's attempt to downplay it with 'still really good' adds a layer of dark humor or stoicism, making the situation even more memorable and shareable. It's a clear demonstration of the 'pain' mentioned later.",
+      "engagement_triggers": [
+        "shock",
+        "emotional peak (pain/surprise)",
+        "story climaxes or reveals",
+        "quotable (ironic)"
+      ],
+      "viral_score": 7.0,
+      "platforms": [
+        "tiktok",
+        "reels",
+        "shorts"
+      ],
+      "hashtags": [
+        "#ouch",
+        "#blood",
+        "#trainingfail",
+        "#martialarts",
+        "#unexpected"
+      ],
+      "content_type": "entertainment | storytelling | shock",
+      "target_emotion": "shock | surprise | empathy | humor (dark)",
+      "chunk_index": 2
+    },
+    {
+      "id": 3,
+      "timestamp_start": "00:02:46,479",
+      "timestamp_end": "00:02:57,280",
+      "suggested_title": "Commitment Isn't About Feeling Good",
+      "hook_text": "Committing to something doesn't mean I commit to it as long as it feels good to me. No!",
+      "reason": "This is a strong, definitive statement about commitment that challenges a common misconception. It directly addresses a relatable human tendency to give up when things become difficult. The passionate delivery and the direct refutation of a common mindset make it a powerful and quotable soundbite with viral potential.",
+      "engagement_triggers": [
+        "hook",
+        "emotional",
+        "quotable",
+        "contrarian/unexpected opinions",
+        "relatable universal experiences"
+      ],
+      "viral_score": 7.0,
+      "platforms": [
+        "tiktok",
+        "reels",
+        "shorts",
+        "twitter"
+      ],
+      "hashtags": [
+        "#commitment",
+        "#motivation",
+        "#mindsetshift",
+        "#nevergiveup",
+        "#discipline"
+      ],
+      "content_type": "inspirational | controversial",
+      "target_emotion": "inspiration | surprise | determination",
+      "chunk_index": 3
+    },
+    {
+      "id": 3,
+      "timestamp_start": "00:03:13",
+      "timestamp_end": "00:03:24",
+      "suggested_title": "Commitment is Doing THIS When It's Difficult!",
+      "hook_text": "If you break the commitment in the moment where something is getting difficult, that's not a commitment.",
+      "reason": "This is a bold and direct statement about the nature of commitment, particularly when facing challenges. It's a powerful, quotable soundbite that can resonate with anyone who has struggled with follow-through. It challenges the common perception of commitment by defining it by its toughest moments.",
+      "engagement_triggers": [
+        "hook",
+        "quotable",
+        "contrarian/unexpected opinions",
+        "emotional"
+      ],
+      "viral_score": 7.0,
+      "platforms": [
+        "tiktok",
+        "reels",
+        "shorts"
+      ],
+      "hashtags": [
+        "#commitment",
+        "#discipline",
+        "#resilience",
+        "#mindset",
+        "#personalgrowth"
+      ],
+      "content_type": "inspirational | controversial",
+      "target_emotion": "reflection | determination",
+      "chunk_index": 4
+    },
+    {
+      "id": 3,
+      "timestamp_start": "00:05:00,160",
+      "timestamp_end": "00:05:12,000",
+      "suggested_title": "The REAL Question: Inhale or Exhale? Left or Right?",
+      "hook_text": "Is inhaling more important than exhaling? This question will make you think.",
+      "reason": "This segment poses a series of thought-provoking rhetorical questions that challenge conventional thinking about seemingly simple actions. The comparison between opposites like 'left or right' and 'inhale or exhale' can be seen as a deeper philosophical point about balance and interconnectedness, making it a great 'never knew that' educational moment disguised as a simple question. It invites contemplation.",
+      "engagement_triggers": [
+        "hook",
+        "never knew that",
+        "quotable",
+        "contrarian/unexpected opinions",
+        "relatable universal experiences"
+      ],
+      "viral_score": 7.0,
+      "platforms": [
+        "tiktok",
+        "reels",
+        "shorts",
+        "youtube"
+      ],
+      "hashtags": [
+        "#balance",
+        "#mindset",
+        "#perspective",
+        "#philosophy",
+        "#selfimprovement"
+      ],
+      "content_type": "educational | inspirational",
+      "target_emotion": "curiosity | contemplation | wonder",
+      "chunk_index": 5
+    },
+    {
+      "id": 3,
+      "timestamp_start": "00:07:02,199",
+      "timestamp_end": "00:07:14,439",
+      "suggested_title": "Mastering Your Mind: Be Everywhere at Once!",
+      "hook_text": "I can be here, I can be here... I can talk to you, and watch the angle of my eye, ALL AT THE SAME TIME!",
+      "reason": "This segment highlights a remarkable skill that is both aspirational and intriguing. The description of being in multiple places mentally and physically simultaneously is a powerful concept that can resonate with viewers seeking self-improvement or simply fascinated by advanced human capabilities. It's a very 'wow' moment.",
+      "engagement_triggers": [
+        "hook",
+        "quotable",
+        "inspirational",
+        "storytelling",
+        "'i never knew that'"
+      ],
+      "viral_score": 7.0,
+      "platforms": [
+        "tiktok",
+        "reels",
+        "shorts",
+        "instagram"
+      ],
+      "hashtags": [
+        "#bodyawareness",
+        "#mindfulness",
+        "#shaolin",
+        "#focus",
+        "#multitasking"
+      ],
+      "content_type": "inspirational",
+      "target_emotion": "awe",
+      "chunk_index": 7
+    },
+    {
+      "id": 4,
+      "timestamp_start": "00:04:00,919",
+      "timestamp_end": "00:04:14,840",
+      "suggested_title": "Why You're Stuck: The Truth About Changing Too Much",
+      "hook_text": "If you're not progressing, you might be changing TOO much.",
+      "reason": "This offers a contrarian perspective on personal development. The idea that 'continuously changing too much' is the reason one isn't 'proceeding' or 'getting out of' a difficult situation is unexpected. It directly addresses a relatable universal experience of feeling stuck and offers a simple, yet potentially profound, explanation.",
+      "engagement_triggers": [
+        "hook",
+        "contrarian/unexpected opinions",
+        "relatable universal experiences"
+      ],
+      "viral_score": 6.0,
+      "platforms": [
+        "tiktok",
+        "reels",
+        "shorts",
+        "youtube"
+      ],
+      "hashtags": [
+        "#motivation",
+        "#personalgrowth",
+        "#mindsetshift",
+        "#stuck",
+        "#progress"
+      ],
+      "content_type": "inspirational | educational",
+      "target_emotion": "curiosity | realization",
+      "chunk_index": 5
+    }
+  ]
+}
