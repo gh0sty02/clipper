@@ -17,7 +17,7 @@ class VideoProcessor:
     """Process video clips with cropping, trimming, and captions"""
     
     def __init__(self):
-        self.crop_detector = CropDetector(face_detection_enabled=True)
+        self.crop_detector = CropDetector(face_detection_enabled=True, use_mediapipe=True)
     
     def create_clip(
         self,

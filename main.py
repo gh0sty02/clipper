@@ -64,6 +64,19 @@ class ClipperPipeline:
             logger.info("Step 2: Fetching transcript...")
             try:
                 transcript_data = self.transcript_fetcher.fetch_transcript(youtube_url)
+
+                # Save full transcript text and SRT to output
+                full_transcript_path = output_dir / "full_transcript.txt"
+                full_transcript_path.write_text(
+                    self.transcript_fetcher.format_transcript(transcript_data),
+                    encoding='utf-8'
+                )
+                logger.info(f"Saved full transcript: {full_transcript_path}")
+
+                full_srt_path = output_dir / "full_transcript.srt"
+                self.transcript_fetcher.save_srt(transcript_data, str(full_srt_path))
+                logger.info(f"Saved full SRT: {full_srt_path}")
+
             except Exception as e:
                 logger.warning(f"Could not fetch transcript: {e}")
                 logger.warning("Proceeding without captions")
@@ -71,7 +84,7 @@ class ClipperPipeline:
         elif local_file and caption_preset:
             logger.warning("Captions are not yet supported for local files (need transcript source). Skipping captions.")
             caption_preset = None
-        
+
         # Step 3: Process each clip
         logger.info(f"Step 3: Processing {len(clips)} clips...")
         results = []
