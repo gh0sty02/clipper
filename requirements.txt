@@ -8,6 +8,9 @@ python-dotenv
 # MediaPipe for advanced face detection
 mediapipe>=0.10.0
 
+# for using gemini api
+google-genai
+
 # Optional: Alternative face detection backends (uncomment if needed)
 # dlib>=19.24  # For HOG/CNN face detection (requires CMake)
 # face-recognition>=1.3.0  # High-level wrapper for dlib (requires dlib)
